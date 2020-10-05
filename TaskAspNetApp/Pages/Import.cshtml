@@ -1,0 +1,14 @@
+﻿@page "/Contracts/Import"
+@model TaskAspNetApp.Pages.ImportModel
+@{
+	ViewData["Title"] = "Import";
+}
+
+<h1>Import</h1>
+
+@using (Html.BeginForm("Import", "UploadFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<input type="file" name="file" />
+				<input type="submit" value="OK" />}
+
+
