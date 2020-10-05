@@ -129,3 +129,4 @@ D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\Razor\Pages\Import.cshtml.g.cs
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.RazorTargetAssemblyInfo.cs
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.Views.pdb
+D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
