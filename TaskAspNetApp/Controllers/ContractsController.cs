@@ -1,12 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using TaskAspNetApp.Models;
 using TaskAspNetApp.Services;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskAspNetApp.Controllers
 {
@@ -18,7 +14,7 @@ namespace TaskAspNetApp.Controllers
 		public IAsyncEnumerable<Contract> Get()
 		{
 			DBContext context = new DBContext();
-				return context.Contracts.Include(s => s.Stages).AsAsyncEnumerable();
+			return context.Contracts.Include(s => s.Stages).AsAsyncEnumerable();
 		}
 
 	}

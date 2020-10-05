@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using TaskAspNetApp.Models;
 using TaskAspNetApp.Services;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskAspNetApp.Controllers
 {
@@ -26,7 +23,7 @@ namespace TaskAspNetApp.Controllers
 		public IActionResult Get()
 		{
 			return Content("Need parameter \"Id\" of contract. Example: \"https://localhost:44302/api/Contracts/GetContractStages/9\"");
-			
+
 		}
 
 	}

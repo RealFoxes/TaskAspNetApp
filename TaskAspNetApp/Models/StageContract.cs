@@ -9,11 +9,11 @@ namespace TaskAspNetApp.Models
 	{
 		[Key]
 		public int Id { get; set; }
-		[Required,JsonIgnore]
+		[Required, JsonIgnore]
 		public virtual Contract contract { get; set; }
 		[Required, MaxLength(256)]
 		public string Name { get; set; }
-		[Required,Column(TypeName = "date")]
+		[Required, Column(TypeName = "date")]
 		public DateTime DateStart { get; set; }
 		[Required, Column(TypeName = "date")]
 		public DateTime DateEnd { get; set; }

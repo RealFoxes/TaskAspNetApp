@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using TaskAspNetApp.Models;
 using TaskAspNetApp.Services;
@@ -22,8 +19,9 @@ namespace TaskAspNetApp.Controllers
 			string fileExtension = Path.GetExtension(file.FileName);
 			if (fileExtension != ".xls" && fileExtension != ".xlsx") return Content("Error: Wrong file extension");
 			var stream = file.OpenReadStream();
-			List<Contract> contracts = await Task.Run(()=>{
-				ExcelHandler excelHandler = new ExcelHandler(stream,fileExtension);
+			List<Contract> contracts = await Task.Run(() =>
+			{
+				ExcelHandler excelHandler = new ExcelHandler(stream, fileExtension);
 				return excelHandler.GetContractsFromExcel();
 			});
 			DBContext dBContext = new DBContext();
