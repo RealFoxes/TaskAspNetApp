@@ -32,5 +32,10 @@ namespace TaskAspNetApp.Controllers
 			return Content("All good");
 		}
 
+		[HttpGet]
+		public IActionResult Get()
+		{
+			return Content("Need Use post request with parameter \"file\"");
+		}
 	}
 }

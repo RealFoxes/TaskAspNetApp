@@ -1,8 +1,103 @@
-﻿@page
+﻿@page "/Contracts/Index"
 @model TaskAspNetApp.Pages.IndexModel
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		load();
+		function load() {
+			$.ajax({
+				url: '/api/Contracts/GetContracts', //Change this path to your JSON file.
+				type: "GET",
+				dataType: "json",
+				//Remove the "data" attribute, relevant to this example, but isn't necessary in deployment.
+				success: function (data, textStatus) {
+					drawTable(data);
+				}
+			});
+		}
 
+		function drawTable(data) {
+			var rows = [];
+
+			for (var i = 0; i < data.length; i++) {
+				rows.push(drawRow(data[i]));
+			}
+
+			$(".table").append(rows);
+		}
+
+		function drawRow(rowData) {
+			var options = {
+				year: 'numeric',
+				month: 'numeric',
+				day: 'numeric'
+			};
+
+
+			var row = $("<tr />")
+			row.append($("<td scope=\"row\" >" + rowData.id + "</td>"));
+			row.append($("<td scope=\"row\" >" + rowData.code + "</td>"));
+			row.append($("<td scope=\"row\" >" + rowData.name + "</td>"));
+			row.append($("<td scope=\"row\" >" + rowData.client + "</td>"));
+			
+			//row.append($("<td scope=\"row\" >" + JSON.stringify(rowData.stages) + "</td>"));
+			row.append($("<td scope=\"row\" >" + rowData.stages.map(function (st) { return st.name + " [" + new Date(st.dateStart).toLocaleString("ru", options) + "/" + new Date(st.dateEnd).toLocaleString("ru", options)+"]"}).join("<br>") + "</td>"));
+
+			return row;
+		}
+	</script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+	header {
+		color: lightslategrey;
+	}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="/Contracts/Import">Import <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/api/Import/UploadFile">/api/Import/UploadFile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/api/Contracts/GetContracts">/api/Contracts/GetContracts</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/api/Contracts/GetContractStages">/api/Contracts/GetContractStages</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<main>
+		<div class="container" style="height:1300px;">
+			<div class="row mt-5 pt-5">
+				<div class="col text-center">
+					<table class="table">
+						<tr>
+							<th scope="col">ИДЕНТИФИКАТОР</th>
+							<th scope="col">ШИФР ДОГОВОРА</th>
+							<th scope="col">НАИМЕНОВАНИЕ ДОГОВОРА</th>
+							<th scope="col">ЗАКАЗЧИК</th>
+							<th scope="col">ЭТАПЫ</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	
+</body>
