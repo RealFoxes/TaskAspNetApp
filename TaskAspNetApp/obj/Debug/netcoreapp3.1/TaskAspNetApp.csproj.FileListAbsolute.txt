@@ -117,8 +117,6 @@ D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\ru\Microsoft.
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.csproj.CoreCompileInputs.cache
-D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\TaskAspNetApp.Views.dll
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\bin\Debug\netcoreapp3.1\TaskAspNetApp.Views.pdb
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.RazorAssemblyInfo.cache
@@ -130,3 +128,5 @@ D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\Razor\Pages\I
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.RazorTargetAssemblyInfo.cs
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.Views.pdb
 D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.csproj.CoreCompileInputs.cache
+D:\Projects\C#\TaskAspNetApp\TaskAspNetApp\obj\Debug\netcoreapp3.1\TaskAspNetApp.MvcApplicationPartsAssemblyInfo.cache
